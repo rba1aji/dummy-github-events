@@ -1,2 +1,2 @@
 # dummy-github-events
-It is an
+It is an assignment
