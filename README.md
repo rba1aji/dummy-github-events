@@ -1,2 +1,2 @@
 # dummy-github-events
-It is an assignment for 
+It is an assignment for internship
