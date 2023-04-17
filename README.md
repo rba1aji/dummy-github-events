@@ -1,2 +1,2 @@
 # github-events-tracker
-This is an assignment for intern
+This is an assignment for internship
