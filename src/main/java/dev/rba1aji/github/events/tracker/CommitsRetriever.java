@@ -20,10 +20,10 @@ public class CommitsRetriever {
         String response = new OkHttpClient().newCall(request).execute().body().string();
         JsonNode resNode = new ObjectMapper().readTree(response);
 
-        for (int i = 0; i < resNode.size(); i++) {
+        for (int i = resNode.size() - 1; i >= 0; i--) {
             JsonNode commit = resNode.get(i).get("commit");
             logger.info(
-                    "Commit by " + commit.get("author").get("name") +
+                    "##COMMIT by " + commit.get("author").get("name") +
                             " -> " + resNode.get(i).get("commit").get("message")
             );
         }

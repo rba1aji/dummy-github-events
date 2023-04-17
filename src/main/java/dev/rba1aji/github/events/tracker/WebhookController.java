@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Logger;
 
+
 @RestController
 @RequestMapping("/api")
 public class WebhookController {
@@ -15,11 +16,18 @@ public class WebhookController {
 
     @PostMapping("/webhook")
     @ResponseStatus(HttpStatus.OK)
-    public String trackEvent(@RequestBody String event) throws JsonProcessingException {
+    public static String trackEvent(@RequestBody String event) throws JsonProcessingException {
         JsonNode eventDetails = new ObjectMapper().readTree(event);
-        String author = eventDetails.get("head_commit").get("author").get("name").asText();
-        String message = eventDetails.get("head_commit").get("message").asText();
-        logger.info("Commit by " + author + " -> " + message);
+
+        if (eventDetails.get("head_commit") != null) {
+            logger.info(
+                    "##COMMIT by " + eventDetails.get("head_commit").get("author").get("name")
+                            + " -> "
+                            + eventDetails.get("head_commit").get("message")
+            );
+        }
+
         return "Event tracked";
     }
+
 }
