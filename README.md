@@ -3,7 +3,7 @@ This is an assignment for internship at TechStaX
 
 ### Result of my execution:
 
-![image](https://user-images.githubusercontent.com/86100927/232512781-66618e2e-b5ca-4cf1-95c4-df0823a15c46.png)
+![image](https://user-images.githubusercontent.com/86100927/232513146-9442974d-6df6-457f-a111-5df271a33a7a.png)
 
 ## How to run and test:
 - Clone the repository
