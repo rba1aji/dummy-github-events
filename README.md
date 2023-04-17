@@ -1,2 +1,2 @@
 # github-events-tracker
-This is
+This is a
