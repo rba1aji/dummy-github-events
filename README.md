@@ -1,2 +1,2 @@
 # github-events-tracker
-This is an assign
+This is an assignment
